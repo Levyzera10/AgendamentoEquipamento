@@ -16,6 +16,9 @@ public class Programa {
 
             String opcao = scan.nextLine();
 
+            if(opcao == "1")
+                return;
+
             switch (opcao) {
                 case "1":
                     login();
@@ -41,7 +44,7 @@ public class Programa {
             System.out.println("Digite sua senha: ");
             String senha = scan.nextLine();
 
-            if (usuarioAdmin.equals(usuarioAdmin) && senha.equals(senhaAdmin)){
+            if (usuarioAdmin.equals(usuarioAdmin) && senha.equals(senhaAdmin)) {
                 System.out.println("ACESSO CONCEDIDO");
             }else{
                 Boolean tentarNovamente = true;
