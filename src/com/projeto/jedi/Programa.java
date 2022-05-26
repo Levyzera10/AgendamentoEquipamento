@@ -18,10 +18,19 @@ public class Programa {
 
             switch (opcao) {
                 case "1":
-                    equipamentoService.listarEquipamento();
+                    sistema = false;
                     break;
                 case "2":
-                    sistema = false;
+                    equipamentoService.listarEquipamento();
+                    break;
+                case "3":
+                    equipamentoService.alterarEquipamento();
+                    break;
+                case"4":
+                    equipamentoService.salvarEquipamento();
+                    break;
+                case"5":
+                    equipamentoService.deletarEquipamento();
                     break;
                 default:
                     System.out.println("Opção inválido");
