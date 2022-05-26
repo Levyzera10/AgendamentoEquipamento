@@ -2,6 +2,7 @@ package com.projeto.jedi.services;
 
 public class EquipamentoService {
 
+
     public void listarEquipamento(){
 
     }
