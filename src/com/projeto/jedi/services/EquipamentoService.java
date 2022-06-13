@@ -3,16 +3,22 @@ package com.projeto.jedi.services;
 public class EquipamentoService {
 
 
-    public void listarEquipamento(){
+    public void listarEquipamento() {
+        System.out.println("Listar Equipamento");
+    }
+
+    public void salvarEquipamento() {
+        System.out.println("Salvar equipamento");
 
     }
-    public void salvarEquipamento(){
+
+    public void alterarEquipamento() {
+        System.out.println("Alterar equipamento");
 
     }
-    public void alterarEquipamento(){
 
-    }
-    public void deletarEquipamento(){
+    public void deletarEquipamento() {
+        System.out.println("Deletar");
 
     }
 }
