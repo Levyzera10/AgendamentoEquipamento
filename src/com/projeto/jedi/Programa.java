@@ -2,13 +2,14 @@ package com.projeto.jedi;
 
 import com.projeto.jedi.services.EquipamentoService;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Programa {
 
     static Scanner scan = new Scanner(System.in);
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         EquipamentoService equipamentoService = new EquipamentoService();
 
         Boolean sistema = true;
