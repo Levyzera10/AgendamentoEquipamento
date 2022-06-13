@@ -15,6 +15,13 @@ public class Programa {
         Boolean sistema = true;
         while (sistema) {
 
+            System.out.println("Escolha uma opção: ");
+            System.out.println("1- Login");
+            System.out.println("2- Adicionar equipamento");
+            System.out.println("3- Alterar equipamento");
+            System.out.println("4- Salvar");
+            System.out.println("5- Deletar");
+
             String opcao = scan.nextLine();
 
             switch (opcao) {
