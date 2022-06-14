@@ -12,7 +12,7 @@ public class EquipamentoRepository {
     public File arquivo;
 
     public EquipamentoRepository() throws IOException {
-        File diretorio = new File("C:\\Users\\Curumin\\Documents\\Projetos\\projetocadastro");
+        File diretorio = new File("C:\\Users\\Curumin\\Documents\\Projetos\\AgendamentoEquipamento");
         File arquivo = new File(diretorio + "/teste.txt");
 
         if (!diretorio.exists()) {
@@ -32,7 +32,7 @@ public class EquipamentoRepository {
 
     public void save(Equipamento equipamento) throws IOException {
 
-        FileWriter fw = new FileWriter(this.arquivo , true);
+        FileWriter fw = new FileWriter(this.arquivo, true);
         BufferedWriter bw = new BufferedWriter(fw);
 
 
