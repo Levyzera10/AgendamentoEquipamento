@@ -2,18 +2,17 @@ package com.projeto.jedi.repositories;
 
 import com.projeto.jedi.model.Equipamento;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class EquipamentoRepository {
 
     public File arquivo;
 
     public EquipamentoRepository() throws IOException {
-        File diretorio = new File("C:\\Users\\Curumin\\Documents\\Projetos\\AgendamentoEquipamento");
-        File arquivo = new File(diretorio + "/teste.txt");
+        File diretorio = new File("./src/com/projeto/jedi/arquivos");
+        File arquivo = new File(diretorio + "/equipamentos.txt");
 
         if (!diretorio.exists()) {
             diretorio.mkdir();
@@ -26,8 +25,26 @@ public class EquipamentoRepository {
         this.arquivo = arquivo;
     }
 
-    public void getAll() {
+    public List<Equipamento> getAll() throws IOException {
 
+        FileReader fr = new FileReader(this.arquivo);
+        BufferedReader bf = new BufferedReader(fr);
+
+        List<Equipamento> equipamentoList = new ArrayList<>();
+
+        while (bf.ready()) {
+
+            String linha = bf.readLine();
+            String[] linhaSplit = linha.split("-");
+
+            Equipamento equipamento = new Equipamento(linhaSplit[0], linhaSplit[1], linhaSplit[2]);
+            equipamentoList.add(equipamento);
+
+        }
+
+        bf.close();
+        fr.close();
+        return equipamentoList;
     }
 
     public void save(Equipamento equipamento) throws IOException {
