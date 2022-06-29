@@ -60,7 +60,11 @@ public class EquipamentoRepository {
         fw.close();
     }
 
-    public void update() {
+    public void update() throws IOException {
+    FileWriter fw = new FileWriter(this.arquivo);
+    BufferedWriter bw = new BufferedWriter(fw);
+
+
 
     }
 
