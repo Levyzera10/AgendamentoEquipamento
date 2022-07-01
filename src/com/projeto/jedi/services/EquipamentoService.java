@@ -45,12 +45,6 @@ public class EquipamentoService {
 
     public void alterarEquipamento() throws IOException {
         System.out.println("Alterar equipamento");
-        equipamentoRepository.update();
-        System.out.println("Digite o ID do equipamento:");
-
-        System.out.println("Digite o nome do equipamento:");
-
-        System.out.println("Digite o fabricante:");
 
     }
 
